@@ -6,7 +6,7 @@ export const Card = styled.div`
 
   background-color: ${({ theme }) => theme.colors.white};
 
-  border-radius: 32px;
+  border-radius: 12px;
 
   display: flex;
   flex-direction: column;
@@ -17,4 +17,31 @@ export const Card = styled.div`
   padding: ${({ theme }) => theme.spaces[4]}px;
 `
 
-export const Heading = styled.h3``
+export const Heading = styled.p`
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSizes[2]}px};
+
+  padding: 0px 32px;
+`
+
+export const Header = styled.header`
+  width: 100%;
+  height: 120px;
+
+  background-color: ${({ theme }) => theme.colors.black};
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+export const Navigation = styled.a`
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSizes[2]}px};
+
+  padding: 0px 24px;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`
