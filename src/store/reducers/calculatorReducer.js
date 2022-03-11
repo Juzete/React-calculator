@@ -18,11 +18,11 @@ const calculatorReducer = (
 ) => {
   switch (action.type) {
     case PRESS_BUTTON:
-      checkButtonType(
-        action.payload.type,
-        action.payload.formula,
-        state.operations,
-      )
+      // checkButtonType(
+      //   action.payload.type,
+      //   action.payload.formula,
+      //   state.operations,
+      // )
       return state
 
     case ADD_SYMBOL:
@@ -41,9 +41,9 @@ const calculatorReducer = (
     case ERASE_LAST_SYMBOL:
       return {
         ...state,
-        operations: [...state.operations].pop(),
+        operations: [...state.operations].slice(0, -1),
         currentDisplay: [...state.operations]
-          .pop()
+          .slice(0, -1)
           .join(''),
       }
 

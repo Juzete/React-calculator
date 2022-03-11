@@ -2,6 +2,7 @@ import calculatorButtons from '@/constants/calculatorButtons'
 import {
   addSymbolAction,
   calculateAction,
+  eraseAllSymbolsAction,
   eraseLastSymbolAction,
 } from '@/store/actions'
 import { store } from '@/store/store'
@@ -9,11 +10,12 @@ import { store } from '@/store/store'
 const checkOperationType = operation => {
   return calculatorButtons.some(
     item =>
-      item.formula === operation && item.type === 'number',
+      item.formula === +operation && item.type === 'number',
   )
 }
 
 const checkButtonType = (type, symbol, operations) => {
+  console.log(type, symbol)
   const lastOperation = operations[operations.length - 1]
   switch (type) {
     case 'number':
@@ -31,6 +33,14 @@ const checkButtonType = (type, symbol, operations) => {
 
     case 'calculate':
       store.dispatch(calculateAction())
+      break
+
+    case 'key':
+      if (symbol === 'clearLast') {
+        store.dispatch(eraseLastSymbolAction())
+      } else {
+        store.dispatch(eraseAllSymbolsAction())
+      }
       break
 
     default:
