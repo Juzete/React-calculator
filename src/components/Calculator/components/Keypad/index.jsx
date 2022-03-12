@@ -1,13 +1,10 @@
-import calculatorButtons from '@/constants/calculatorButtons'
+import { calculatorButtons } from '@/constants'
 import checkButtonType from '@/helpers/checkButtonType'
 import { useCalculatorSelector } from '@/hooks'
-import { pressButtonAction } from '@/store/actions'
 import React from 'react'
-import { useDispatch } from 'react-redux'
 import { CalcButton, CalcKeypad } from './components'
 
 const Keypad = () => {
-  const dispatch = useDispatch()
   const allData = useCalculatorSelector()
 
   const buttonHandler = e => {
@@ -16,13 +13,6 @@ const Keypad = () => {
       e.target.getAttribute('data-formula'),
       allData.operations,
     )
-
-    // dispatch(
-    //   pressButtonAction(
-    //     e.target.getAttribute('data-formula'),
-    //     e.target.getAttribute('data-type'),
-    //   ),
-    // )
   }
 
   return (

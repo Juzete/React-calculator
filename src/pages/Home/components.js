@@ -21,7 +21,7 @@ export const Heading = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes[2]}px};
 
-  padding: 0px 32px;
+  padding: 0px 32px 16px;
 `
 
 export const Header = styled.header`

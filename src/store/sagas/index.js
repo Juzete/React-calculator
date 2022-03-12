@@ -1,6 +1,16 @@
 import { all } from 'redux-saga/effects'
-import { displayWatcher } from './calculatorSaga'
+import {
+  addSymbolWatcher,
+  calculateWatcher,
+  eraseAllSymbolsWatcher,
+  eraseLastSymbolWatcher,
+} from './calculatorSaga'
 
 export default function* rootSaga() {
-  yield all([displayWatcher()])
+  yield all([
+    addSymbolWatcher(),
+    eraseLastSymbolWatcher(),
+    eraseAllSymbolsWatcher(),
+    calculateWatcher(),
+  ])
 }

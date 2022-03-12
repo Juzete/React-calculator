@@ -1,4 +1,4 @@
-import calculatorButtons from '@/constants/calculatorButtons'
+import { calculatorButtons } from '@/constants'
 import {
   addSymbolAction,
   calculateAction,
@@ -6,20 +6,39 @@ import {
   eraseLastSymbolAction,
 } from '@/store/actions'
 import { store } from '@/store/store'
+import { symbol } from 'prop-types'
 
 const checkOperationType = operation => {
-  return calculatorButtons.some(
-    item =>
-      item.formula === +operation && item.type === 'number',
-  )
+  console.log(+operation)
+  return calculatorButtons.some(item => {
+    if (isNaN(+operation)) {
+      return (
+        item.formula === operation && item.type === 'number'
+      )
+    } else {
+      return (
+        item.formula === +operation &&
+        item.type === 'number'
+      )
+    }
+  })
 }
 
+const checkIsDot = (symbol, operation) =>
+  symbol === '.' && symbol === operation
+
 const checkButtonType = (type, symbol, operations) => {
-  console.log(type, symbol)
   const lastOperation = operations[operations.length - 1]
   switch (type) {
     case 'number':
-      store.dispatch(addSymbolAction(symbol))
+      console.log(
+        symbol,
+        lastOperation,
+        checkIsDot(symbol, lastOperation),
+      )
+      if (!checkIsDot(symbol, lastOperation)) {
+        store.dispatch(addSymbolAction(symbol))
+      }
       break
 
     case 'operator':

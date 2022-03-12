@@ -16,3 +16,6 @@ export const CalcHistory = styled.div`
   grid-row-start: 1;
   grid-row-end: 7;
 `
+export const HistoryElements = styled.div`
+  margin: 12px;
+`

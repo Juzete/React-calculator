@@ -1,10 +1,10 @@
-import checkButtonType from '@/helpers/checkButtonType'
 import {
   ADD_SYMBOL,
+  CALCULATE,
   ERASE_ALL_SYMBOLS,
   ERASE_LAST_SYMBOL,
-  PRESS_BUTTON,
 } from '@/store/constants'
+import { parsePlusSeparatedExpression } from '@/utils/expressionParser'
 
 const INITIAL_STATE = {
   currentDisplay: '',
@@ -17,14 +17,6 @@ const calculatorReducer = (
   action,
 ) => {
   switch (action.type) {
-    case PRESS_BUTTON:
-      // checkButtonType(
-      //   action.payload.type,
-      //   action.payload.formula,
-      //   state.operations,
-      // )
-      return state
-
     case ADD_SYMBOL:
       return {
         ...state,
@@ -52,6 +44,20 @@ const calculatorReducer = (
         ...state,
         operations: [],
         currentDisplay: '',
+      }
+
+    case CALCULATE:
+      return {
+        ...state,
+        operations: [
+          parsePlusSeparatedExpression(
+            state.operations.join(''),
+          ),
+        ],
+        currentDisplay: parsePlusSeparatedExpression(
+          state.operations.join(''),
+        ).toString(),
+        history: [...state.history, state.currentDisplay],
       }
 
     default:

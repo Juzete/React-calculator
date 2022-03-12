@@ -1,5 +1,4 @@
 export const ADD_SYMBOL = 'ADD_SYMBOL'
 export const ERASE_LAST_SYMBOL = 'ERASE_LAST_SYMBOL'
 export const ERASE_ALL_SYMBOLS = 'ERASE_ALL_SYMBOLS'
-export const PRESS_BUTTON = 'PRESS_BUTTON'
 export const CALCULATE = 'CALCULATE'
