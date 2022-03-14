@@ -4,6 +4,7 @@ import {
   calculateWatcher,
   eraseAllSymbolsWatcher,
   eraseLastSymbolWatcher,
+  switchThemeWatcher,
 } from './calculatorSaga'
 
 export default function* rootSaga() {
@@ -12,5 +13,6 @@ export default function* rootSaga() {
     eraseLastSymbolWatcher(),
     eraseAllSymbolsWatcher(),
     calculateWatcher(),
+    switchThemeWatcher(),
   ])
 }

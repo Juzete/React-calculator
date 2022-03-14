@@ -6,10 +6,8 @@ import {
   eraseLastSymbolAction,
 } from '@/store/actions'
 import { store } from '@/store/store'
-import { symbol } from 'prop-types'
 
 const checkOperationType = operation => {
-  console.log(+operation)
   return calculatorButtons.some(item => {
     if (isNaN(+operation)) {
       return (
@@ -31,11 +29,6 @@ const checkButtonType = (type, symbol, operations) => {
   const lastOperation = operations[operations.length - 1]
   switch (type) {
     case 'number':
-      console.log(
-        symbol,
-        lastOperation,
-        checkIsDot(symbol, lastOperation),
-      )
       if (!checkIsDot(symbol, lastOperation)) {
         store.dispatch(addSymbolAction(symbol))
       }

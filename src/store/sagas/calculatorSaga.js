@@ -7,6 +7,7 @@ const {
   ADD_SYMBOL,
   ERASE_LAST_SYMBOL,
   ERASE_ALL_SYMBOLS,
+  SWITCH_THEME,
 } = require('../constants')
 
 function* addSymbolWorker() {
@@ -39,4 +40,12 @@ function* calculateWorker() {
 
 export function* calculateWatcher() {
   yield takeEvery(ERASE_ALL_SYMBOLS, calculateWorker)
+}
+
+function* switchThemeWorker() {
+  yield put(calculateAction)
+}
+
+export function* switchThemeWatcher() {
+  yield takeEvery(SWITCH_THEME, switchThemeWorker)
 }

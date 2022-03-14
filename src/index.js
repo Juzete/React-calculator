@@ -10,7 +10,7 @@ import { ThemeProvider } from 'styled-components'
 import Application from '@/App'
 
 import { store } from '@/store/store'
-import theme from '@/theme'
+import theme from '@/themes/theme'
 import GlobalStyles from '@/globalStyles'
 
 ReactDOM.render(

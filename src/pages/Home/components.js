@@ -34,9 +34,10 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
 `
-export const Navigation = styled.a`
+export const Navigation = styled.span`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSizes[2]}px};
+  text-decoration: none;
 
   padding: 0px 24px;
 

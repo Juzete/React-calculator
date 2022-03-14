@@ -3,6 +3,8 @@ import {
   CALCULATE,
   ERASE_ALL_SYMBOLS,
   ERASE_LAST_SYMBOL,
+  RESET_HISTORY,
+  SWITCH_THEME,
 } from '@/store/constants'
 import { parsePlusSeparatedExpression } from '@/utils/expressionParser'
 
@@ -10,6 +12,7 @@ const INITIAL_STATE = {
   currentDisplay: '',
   operations: [],
   history: [],
+  theme: 'dark',
 }
 
 const calculatorReducer = (
@@ -58,6 +61,18 @@ const calculatorReducer = (
           state.operations.join(''),
         ).toString(),
         history: [...state.history, state.currentDisplay],
+      }
+
+    case SWITCH_THEME:
+      return {
+        ...state,
+        theme: action.payload.theme,
+      }
+
+    case RESET_HISTORY:
+      return {
+        ...state,
+        history: [],
       }
 
     default:

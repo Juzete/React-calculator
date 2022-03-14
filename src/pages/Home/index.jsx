@@ -8,6 +8,11 @@ import {
   Navigation,
 } from './components'
 import Calculator from '@/components/Calculator'
+import { Link } from 'react-router-dom'
+import {
+  HOME_PAGE_ROUTE,
+  SETTINGS_PAGE_ROUTE,
+} from '@/constants'
 
 export default () => {
   return (
@@ -15,10 +20,18 @@ export default () => {
       <Card>
         <Header>
           <Heading>Calculator App</Heading>
-          <div>
-            <Navigation>Home</Navigation>
-            <Navigation>Settings</Navigation>
-          </div>
+          <nav>
+            <Link
+              to={HOME_PAGE_ROUTE}
+              style={{ textDecoration: 'none' }}>
+              <Navigation>Home</Navigation>
+            </Link>
+            <Link
+              to={SETTINGS_PAGE_ROUTE}
+              style={{ textDecoration: 'none' }}>
+              <Navigation>Settings</Navigation>
+            </Link>
+          </nav>
         </Header>
         <Calculator />
       </Card>
