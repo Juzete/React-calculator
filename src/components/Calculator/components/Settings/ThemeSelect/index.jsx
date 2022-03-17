@@ -6,7 +6,7 @@ import { Select, SelectWrapper } from './components'
 export default class ThemeSelect extends Component {
   constructor(props) {
     super(props)
-    this.state = { value: 'dark' }
+    this.state = { value: 'light' }
   }
 
   handleChange = e => {
@@ -23,8 +23,8 @@ export default class ThemeSelect extends Component {
         <Select
           value={this.state.value}
           onChange={this.handleChange}>
-          <option value="dark">Dark Theme</option>
           <option value="light">Light Theme</option>
+          <option value="dark">Dark Theme</option>
         </Select>
       </SelectWrapper>
     )

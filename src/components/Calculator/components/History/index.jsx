@@ -8,7 +8,7 @@ const History = props => {
 
   return (
     <CalcHistory>
-      <Heading style={{ color: 'black' }}>History</Heading>
+      <Heading>History</Heading>
       <div>
         {allData.history.map(item => (
           <HistoryElements key={item}>

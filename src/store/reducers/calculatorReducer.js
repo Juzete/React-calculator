@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   currentDisplay: '',
   operations: [],
   history: [],
-  theme: 'dark',
+  theme: 'light',
 }
 
 const calculatorReducer = (

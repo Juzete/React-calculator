@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const CalcHistory = styled.div`
-  border-left: 1px solid grey;
+  border-left: 1px solid
+    ${({ theme }) => theme.secondaryLight};
 
   display: flex;
   width: 200px;
