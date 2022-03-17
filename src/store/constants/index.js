@@ -1,0 +1,6 @@
+export const ADD_SYMBOL = 'ADD_SYMBOL'
+export const ERASE_LAST_SYMBOL = 'ERASE_LAST_SYMBOL'
+export const ERASE_ALL_SYMBOLS = 'ERASE_ALL_SYMBOLS'
+export const CALCULATE = 'CALCULATE'
+export const SWITCH_THEME = 'SWITCH_THEME'
+export const RESET_HISTORY = 'RESET_HISTORY'

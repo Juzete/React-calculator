@@ -25,6 +25,7 @@ export const CalcButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    background: #f9f3e9;
+    background: ${({ theme }) =>
+      theme.colors.secondaryLight};
   }
 `

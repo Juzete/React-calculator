@@ -1,7 +1,7 @@
-const calculatorButtons = [
+export const calculatorButtons = [
   {
     symbol: 'C',
-    formula: false,
+    formula: 'clear',
     type: 'key',
   },
   {
@@ -96,9 +96,7 @@ const calculatorButtons = [
   },
   {
     symbol: 'CE',
-    formula: false,
+    formula: 'clearLast',
     type: 'key',
   },
 ]
-
-export default calculatorButtons

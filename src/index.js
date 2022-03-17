@@ -10,14 +10,17 @@ import { ThemeProvider } from 'styled-components'
 import Application from '@/App'
 
 import { store } from '@/store/store'
-import theme from '@/theme'
 import GlobalStyles from '@/globalStyles'
+import themeSelect from './utils/themeSelect'
+import ErrorBoundary from './components/ErrorBoundary'
 
 ReactDOM.render(
   <Provider store={store}>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeSelect}>
       <BrowserRouter>
-        <Application />
+        <ErrorBoundary>
+          <Application />
+        </ErrorBoundary>
         <GlobalStyles />
       </BrowserRouter>
     </ThemeProvider>

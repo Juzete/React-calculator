@@ -26,6 +26,7 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-actions": "^2.6.5",
+    "redux-devtools-extension": "^2.13.9",
     "redux-saga": "^1.1.1",
     "styled-components": "^4.4.1",
     "yarn": "^1.19.1",

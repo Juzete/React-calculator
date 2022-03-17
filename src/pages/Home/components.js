@@ -4,7 +4,7 @@ export const Card = styled.div`
   width: 100%;
   height: 100%;
 
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary};
 
   border-radius: 12px;
 
@@ -18,25 +18,27 @@ export const Card = styled.div`
 `
 
 export const Heading = styled.p`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes[2]}px};
 
-  padding: 0px 32px;
+  padding: 0px 32px 16px;
 `
 
 export const Header = styled.header`
   width: 100%;
   height: 120px;
 
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) =>
+    theme.colors.secondary};
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
-export const Navigation = styled.a`
-  color: ${({ theme }) => theme.colors.white};
+export const Navigation = styled.span`
+  color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes[2]}px};
+  text-decoration: none;
 
   padding: 0px 24px;
 
