@@ -8,8 +8,8 @@ const Calculator = props => {
   return (
     <CalculatorWrapper>
       <Display>4000.5</Display>
-      <History> </History>
-      <Keypad> </Keypad>
+      <History />
+      <Keypad />
     </CalculatorWrapper>
   )
 }

@@ -18,7 +18,7 @@ export const Card = styled.div`
 `
 
 export const Heading = styled.p`
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes[2]}px};
 
   padding: 0px 32px 16px;
