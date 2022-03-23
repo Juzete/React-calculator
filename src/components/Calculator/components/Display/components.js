@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const CalcDisplay = styled.div`
   border-bottom: 1px solid grey;
 
+  color: ${({ theme }) => theme.colors.secondary};
+
   height: 100px;
 
   margin: 0px ${({ theme }) => theme.spaces[3]}px;

@@ -1,11 +1,24 @@
+import { useCalculatorSelector } from '@/hooks'
 import React from 'react'
-import { CalcHistory } from './components'
+import {
+  CalcHeading,
+  CalcHistory,
+  HistoryElements,
+} from './components'
 
-const History = props => {
+const History = () => {
+  const allData = useCalculatorSelector()
+
   return (
     <CalcHistory>
-      <div>History</div>
-      <div> {props.children}</div>
+      <CalcHeading>History</CalcHeading>
+      <div>
+        {allData.history.map(item => (
+          <HistoryElements key={item}>
+            {item}
+          </HistoryElements>
+        ))}
+      </div>
     </CalcHistory>
   )
 }

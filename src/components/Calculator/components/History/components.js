@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 export const CalcHistory = styled.div`
-  border-left: 1px solid grey;
+  border-left: 1px solid
+    ${({ theme }) => theme.secondaryLight};
+
+  color: ${({ theme }) => theme.colors.secondary};
 
   display: flex;
   width: 200px;
@@ -16,3 +19,8 @@ export const CalcHistory = styled.div`
   grid-row-start: 1;
   grid-row-end: 7;
 `
+export const HistoryElements = styled.div`
+  margin: 12px;
+`
+
+export const CalcHeading = styled.p``
