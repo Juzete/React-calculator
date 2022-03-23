@@ -21,9 +21,7 @@ const ThemeWrapper = ({ children }) => {
     }
   }
 
-  useEffect(() => {
-    console.log(allData.theme)
-  }, [allData.theme])
+  useEffect(() => {}, [allData.theme])
 
   return (
     <React.Fragment>

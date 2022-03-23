@@ -4,10 +4,10 @@ import Display from './components/Display'
 import History from './components/History'
 import Keypad from './components/Keypad'
 
-const Calculator = props => {
+const Calculator = () => {
   return (
     <CalculatorWrapper>
-      <Display>4000.5</Display>
+      <Display />
       <History />
       <Keypad />
     </CalculatorWrapper>

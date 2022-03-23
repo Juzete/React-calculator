@@ -65,9 +65,9 @@ export const parsePlusSeparatedExpression = expression => {
   const numbers = numbersString.map(noStr => {
     return parseMinusSeparatedExpression(noStr)
   })
-  return numbers
-    .reduce((acc, no) => {
-      return +acc + +no
-    }, 0)
-    .toFixed(3)
+  const result = numbers.reduce((acc, no) => {
+    return +acc + +no
+  }, 0)
+
+  return Math.floor(result * 1000) / 1000
 }

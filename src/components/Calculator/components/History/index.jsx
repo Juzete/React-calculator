@@ -6,7 +6,7 @@ import {
   HistoryElements,
 } from './components'
 
-const History = props => {
+const History = () => {
   const allData = useCalculatorSelector()
 
   return (
