@@ -1,0 +1,7 @@
+/*#__PURE__*/
+
+/***/
+
+// ESM COMPAT FLAG
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
