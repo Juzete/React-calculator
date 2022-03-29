@@ -411,9 +411,9 @@ object-assign
 
 /* this is used for not reinjecting rules via hasNameForId() */
 
-/* unused harmony export BrowserRouter */
-
 /* unused harmony export H */
+
+/* unused harmony export HashRouter */
 
 /* unused harmony export I */
 
