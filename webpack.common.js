@@ -8,9 +8,9 @@ const Dotenv = require('dotenv-webpack')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '',
   },
   plugins: [
     new CleanWebpackPlugin(),

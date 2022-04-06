@@ -1,5 +1,5 @@
-import { calculatorButtons } from '@/constants'
-import checkButtonType from '@/helpers/checkButtonType'
+import { CALCULATOR_BUTTONS } from '@/constants'
+import checkButtonType from '@/utils/checkButtonType'
 import { useCalculatorSelector } from '@/hooks'
 import React from 'react'
 import { CalcButton, CalcKeypad } from './components'
@@ -17,7 +17,7 @@ const Keypad = () => {
 
   return (
     <CalcKeypad>
-      {calculatorButtons.map(item => (
+      {CALCULATOR_BUTTONS.map(item => (
         <CalcButton
           key={item.symbol}
           onClick={buttonHandler}
