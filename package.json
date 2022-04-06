@@ -2,7 +2,7 @@
   "name": "react-project-template",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://nameaccount.github.io/namerepository",
+  "homepage": "https://juzete.github.io/React-calculator/",
   "scripts": {
     "start": "node server.js",
     "dev": "webpack-dev-server --open --config webpack.dev.js",
@@ -12,7 +12,8 @@
     "cypress": "start-server-and-test start http://localhost:3000 cypress:open",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:test": "start-server-and-test start http://localhost:3000 cypress:run"
+    "cypress:test": "start-server-and-test start http://localhost:3000 cypress:run",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -76,5 +77,9 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2"
+  },
+  "output" : {
+    "filename": "bundle.js",
+    "path": "/"
   }
 }

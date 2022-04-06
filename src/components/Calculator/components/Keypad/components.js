@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const CalcKeypad = styled.div`
   display: flex;
+  height: 100%;
   flex-wrap: wrap;
 
   padding: ${({ theme }) => theme.spaces[4]}px;
@@ -10,6 +11,10 @@ export const CalcKeypad = styled.div`
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 7;
+
+  @media screen and (max-width: 1240px) {
+    overflow: auto;
+  }
 `
 export const CalcButton = styled.button`
   display: flex;

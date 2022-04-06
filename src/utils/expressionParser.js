@@ -51,10 +51,14 @@ const parseDivideSeparatedExpression = expression => {
 }
 
 const parseMinusSeparatedExpression = expression => {
-  const numbersString = split(expression, '-')
+  const numbersString = split(expression, '-').map(item => {
+    if (item === '') return '0'
+    else return item
+  })
   const numbers = numbersString.map(noStr =>
     parseMultiplicationSeparatedExpression(noStr),
   )
+
   return numbers
     .slice(1)
     .reduce((acc, no) => acc - no, numbers[0])

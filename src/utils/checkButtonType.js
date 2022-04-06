@@ -1,4 +1,4 @@
-import { calculatorButtons } from '@/constants'
+import { CALCULATOR_BUTTONS } from '@/constants'
 import {
   addSymbolAction,
   calculateAction,
@@ -8,7 +8,7 @@ import {
 import { store } from '@/store/store'
 
 const checkOperationType = operation => {
-  return calculatorButtons.some(item => {
+  return CALCULATOR_BUTTONS.some(item => {
     if (isNaN(+operation)) {
       return (
         item.formula === operation && item.type === 'number'
